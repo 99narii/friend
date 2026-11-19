@@ -66,7 +66,7 @@ export function HeroSection() {
             </h1>
 
             <p className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#fbbf24]">
-              프렌즈배관 | 서울 강동구 전문
+              프렌즈배관 | 서울/경기/인천 수도권
             </p>
 
             <p className="text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto leading-relaxed opacity-90">

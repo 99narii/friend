@@ -28,7 +28,7 @@ export function Footer() {
         <div className="sr-only" itemScope itemType="https://schema.org/Service">
           <h2>프렌즈배관 서비스 제공 지역</h2>
           <p itemProp="areaServed">
-            서울 강동구, 인천, 강북구, 송파구 배관 서비스 전문
+            서울/경기/인천 수도권 배관 서비스 전문
           </p>
           <div itemProp="serviceType">
             <h3>인천 지역 배관 서비스</h3>
@@ -58,8 +58,7 @@ export function Footer() {
             </p>
           </div>
           <p itemProp="description">
-            프렌즈배관은 서울 강동구를 중심으로 인천, 강북구, 송파구 등
-            수도권 전역에서 24시간 긴급 배관 서비스를 제공합니다.
+            프렌즈배관은 서울/경기/인천 수도권 전역에서 24시간 긴급 배관 서비스를 제공합니다.
             변기막힘, 하수구막힘, 싱크대막힘, 고압세척, 누수탐지,
             수전교체, 변기교체 등 모든 배관 문제를 신속하게 해결해드립니다.
           </p>

@@ -99,7 +99,7 @@ export const SITE_CONFIG = {
   business: {
     type: "LocalBusiness",
     priceRange: "₩₩",
-    areaServed: "서울/경기 수도권",
+    areaServed: "서울/경기/인천 수도권",
     founder: "프렌즈배관",
     foundingDate: "2020-01-01",
     numberOfEmployees: "1-10",
@@ -125,22 +125,50 @@ export const SITE_CONFIG = {
     {
       name: "싱크대 배관 청소",
       description: "싱크대 막힘, 악취 제거, 배수관 청소 전문 서비스",
-      price: "50,000원부터",
+      price: "변동",
+      image: "/photo/싱크대막힘 배관검사.png",
     },
     {
       name: "하수구 역류 해결",
       description: "하수구 역류, 악취, 막힘 문제 신속 해결",
-      price: "80,000원부터",
+      price: "변동",
+      image: "/photo/하수구역류 시공사진.png",
     },
     {
       name: "변기 수리 및 교체",
       description: "변기 막힘, 물 새는 문제, 변기 교체 서비스",
-      price: "60,000원부터",
+      price: "변동",
+      image: "/photo/변기교체.png",
     },
     {
       name: "화장실 배관 공사",
       description: "화장실 전체 배관 점검 및 교체 공사",
-      price: "200,000원부터",
+      price: "변동",
+      image: "/photo/변기막힘 내시경.png",
+    },
+    {
+      name: "세면대 수전 교체",
+      description: "세면대 수전 노후 교체 및 누수 수리",
+      price: "변동",
+      image: "/photo/세면대수전교체.png",
+    },
+    {
+      name: "천장 누수 탐지",
+      description: "열화상 카메라로 정확한 누수 위치 탐지",
+      price: "변동",
+      image: "/photo/천장누수 열화상탐지.png",
+    },
+    {
+      name: "싱크대 수전 교체",
+      description: "싱크대 수전 교체 및 연결 배관 점검",
+      price: "변동",
+      image: "/photo/싱크대수전교체.png",
+    },
+    {
+      name: "배관 내시경",
+      description: "CCTV 배관 내시경으로 정확한 상태 진단",
+      price: "변동",
+      image: "/photo/배관내시경.png",
     },
   ],
 

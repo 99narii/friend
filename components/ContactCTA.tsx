@@ -38,7 +38,7 @@ export function ContactCTA() {
         <div className="mt-12 pt-8 border-t border-white/30">
           <h3 className="text-xl font-bold mb-3">서비스 지역</h3>
           <address className="not-italic text-lg" itemScope itemType="https://schema.org/PostalAddress">
-            <p itemProp="addressRegion">{SITE_CONFIG.business.areaServed}</p>
+            <p itemProp="addressRegion">서울/경기/인천 수도권</p>
             <p itemProp="streetAddress" className="text-sm opacity-80 mt-2">
               본사: {SITE_CONFIG.contact.address}
             </p>

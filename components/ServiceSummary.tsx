@@ -10,10 +10,11 @@ interface ServiceCardProps {
   name: string;
   description: string;
   price: string;
+  image: string;
   index: number;
 }
 
-function ServiceCard({ name, description, price, index }: ServiceCardProps) {
+function ServiceCard({ name, description, price, image, index }: ServiceCardProps) {
   return (
     <article
       className="service-card bg-white shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden"
@@ -23,7 +24,7 @@ function ServiceCard({ name, description, price, index }: ServiceCardProps) {
       {/* 서비스 이미지 */}
       <div className="relative w-full h-32 md:h-48 bg-gradient-to-br from-[#1e3a8a] to-[#172554]">
         <Image
-          src={`/service-${index + 1}.jpg`}
+          src={image}
           alt={`${name} 서비스 이미지`}
           fill
           className="object-cover"
@@ -77,7 +78,7 @@ export function ServiceSummary() {
         </header>
 
         <div
-          className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6"
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6"
           role="list"
         >
           {SITE_CONFIG.services.map((service, index) => (
@@ -86,6 +87,7 @@ export function ServiceSummary() {
               name={service.name}
               description={service.description}
               price={service.price}
+              image={service.image}
               index={index}
             />
           ))}
