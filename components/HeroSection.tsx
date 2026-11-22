@@ -60,20 +60,20 @@ export function HeroSection() {
       {/* Fixed Content */}
       <div className="relative h-full flex items-center justify-center">
         <div className="container-custom text-center text-white">
-          <div className="space-y-6 md:space-y-8">
+          <div className="space-y-6 md:space-y-8 flex flex-col items-center">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
               하수구·변기·세면대막힘
             </h1>
 
-            <p className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#fbbf24]">
+            <p className="text-[1.4rem] md:text-[2.3rem] lg:text-[2.8rem] font-semibold text-[#fbbf24] leading-tight tracking-tight">
               누수탐지까지 한번에 해결해드립니다!
             </p>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl px-8 py-6 md:px-12 md:py-8 max-w-2xl mx-auto border-2 border-[#fbbf24]">
-              <p className="text-3xl md:text-4xl lg:text-5xl font-black text-[#fbbf24] mb-3">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl px-12 py-8 md:px-16 md:py-10 lg:px-20 lg:py-12 mx-auto border-2 border-[#fbbf24]">
+              <p className="text-4xl md:text-6xl lg:text-7xl font-black text-[#fbbf24] mb-4 whitespace-nowrap">
                 미해결시 0원!
               </p>
-              <p className="text-3xl md:text-4xl lg:text-5xl font-black text-white">
+              <p className="text-4xl md:text-6xl lg:text-7xl font-black text-white whitespace-nowrap">
                 출장비 0원!
               </p>
             </div>
