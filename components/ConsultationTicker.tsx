@@ -8,8 +8,11 @@
 import { useEffect, useState } from "react";
 import consultationNames from "@/data/consultation-names.json";
 
+const statusTypes = ["상담신청", "현장출동", "시공완료", "현장견적"];
+
 export function ConsultationTicker() {
   const [currentName, setCurrentName] = useState("");
+  const [currentStatus, setCurrentStatus] = useState("");
   const [isVisible, setIsVisible] = useState(true);
 
   // 랜덤 이름 선택 함수
@@ -18,9 +21,16 @@ export function ConsultationTicker() {
     return consultationNames.names[randomIndex];
   };
 
-  // 초기 이름 설정
+  // 랜덤 상태 선택 함수
+  const getRandomStatus = () => {
+    const randomIndex = Math.floor(Math.random() * statusTypes.length);
+    return statusTypes[randomIndex];
+  };
+
+  // 초기 이름 및 상태 설정
   useEffect(() => {
     setCurrentName(getRandomName());
+    setCurrentStatus(getRandomStatus());
   }, []);
 
   useEffect(() => {
@@ -29,9 +39,10 @@ export function ConsultationTicker() {
 
       setTimeout(() => {
         setCurrentName(getRandomName());
+        setCurrentStatus(getRandomStatus());
         setIsVisible(true);
       }, 300);
-    }, 3000);
+    }, 6000);
 
     return () => clearInterval(interval);
   }, []);
@@ -53,8 +64,19 @@ export function ConsultationTicker() {
             }`}
           >
             <p className="text-base md:text-xl text-gray-800">
-              <span className="font-bold text-[#1e3a8a]">{currentName}</span> 님이
-              <span className="font-semibold"> 상담신청</span>을 하셨습니다.
+              <span className="font-bold text-[#1e3a8a]">{currentName}</span>
+              <span className="font-semibold">
+                {currentStatus === "상담신청"
+                  ? " 상담신청을 하셨습니다"
+                  : currentStatus === "현장출동"
+                  ? " 현장출동 했습니다"
+                  : currentStatus === "시공완료"
+                  ? " 시공완료 되었습니다"
+                  : currentStatus === "현장견적"
+                  ? " 현장견적을 받으셨습니다"
+                  : ` ${currentStatus}을 하셨습니다`}
+              </span>
+              .
             </p>
           </div>
         </div>

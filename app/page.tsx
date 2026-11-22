@@ -8,7 +8,9 @@ import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
 import { ServiceSummary } from "@/components/ServiceSummary";
 import { ServiceKeywordSlider } from "@/components/ServiceKeywordSlider";
+import { EquipmentSection } from "@/components/EquipmentSection";
 import { CasesSection } from "@/components/CasesSection";
+import { ReviewSection } from "@/components/ReviewSection";
 import { KeyFeatures } from "@/components/KeyFeatures";
 import { FAQSection } from "@/components/FAQSection";
 import { ConsultationTicker } from "@/components/ConsultationTicker";
@@ -33,11 +35,14 @@ export default function Home() {
         {/* Service Summary */}
         <ServiceSummary />
 
-        {/* Service Keyword Slider */}
-        <ServiceKeywordSlider />
+        {/* Equipment Section */}
+        <EquipmentSection />
 
         {/* Cases Section */}
         <CasesSection />
+
+        {/* Review Section */}
+        <ReviewSection />
 
         {/* Key Features */}
         <KeyFeatures />
@@ -47,6 +52,9 @@ export default function Home() {
 
         {/* Contact CTA */}
         <ContactCTA />
+
+        {/* Service Keyword Slider */}
+        <ServiceKeywordSlider />
       </main>
 
       {/* Footer */}

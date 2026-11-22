@@ -19,136 +19,45 @@ interface CaseItem {
 const cases: CaseItem[] = [
   {
     id: 1,
-    title: "고압세척 작업",
-    description: "막힌 배관 고압세척으로 완벽 해결",
-    image: "/photo/고압세척기.png",
-    category: "고압세척",
+    title: "변기 교체 작업",
+    description: "노후 변기 신품 교체 완료",
+    image: "/photo/시공/변기교체.png",
+    category: "교체",
   },
   {
     id: 2,
-    title: "누수 수리 비포/애프터",
-    description: "누수 탐지 및 완벽 수리 완료",
-    image: "/photo/누수비포 에프터.png",
-    category: "누수",
+    title: "세면대 수전 교체",
+    description: "세면대 수전 노후 교체 완료",
+    image: "/photo/시공/세면대수전교체.png",
+    category: "수전",
   },
   {
     id: 3,
-    title: "하수구 막힘 해결",
-    description: "막힌 하수구 신속 개통 작업",
-    image: "/photo/막힌하수구뚫는거.png",
-    category: "하수구",
+    title: "싱크대 수전 교체",
+    description: "싱크대 수전 교체 및 배관 점검",
+    image: "/photo/시공/싱크대수전교체.png",
+    category: "수전",
   },
   {
     id: 4,
-    title: "바닥 누수 수리",
-    description: "바닥 누수 탐지 및 보수 완료",
-    image: "/photo/바닥누수 비포 에프터.png",
+    title: "누수 수리 비포/애프터",
+    description: "누수 탐지 및 완벽 수리 완료",
+    image: "/photo/시공/누수비포 에프터.png",
     category: "누수",
   },
   {
     id: 5,
-    title: "배관 내시경 검사",
-    description: "CCTV 배관 내시경으로 정밀 진단",
-    image: "/photo/배관내시경.png",
-    category: "진단",
+    title: "바닥 누수 수리",
+    description: "바닥 누수 탐지 및 보수 완료",
+    image: "/photo/시공/바닥누수 비포 에프터.png",
+    category: "누수",
   },
   {
     id: 6,
-    title: "변기 교체 작업",
-    description: "노후 변기 신품 교체 완료",
-    image: "/photo/변기교체.png",
-    category: "교체",
-  },
-  {
-    id: 7,
-    title: "변기 막힘 내시경 검사",
-    description: "내시경으로 변기 막힘 원인 파악",
-    image: "/photo/변기막힘 내시경.png",
-    category: "진단",
-  },
-  {
-    id: 8,
-    title: "변기 막힘 해소",
-    description: "변기 막힘 긴급 출동 해결",
-    image: "/photo/변기막힘.png",
-    category: "변기",
-  },
-  {
-    id: 9,
-    title: "욕실 수전 교체",
-    description: "세면대 욕실 수전 교체 작업",
-    image: "/photo/세면대 욕실수전 비포 에프터.png",
+    title: "세면대 욕실수전 비포 애프터",
+    description: "욕실 수전 교체 작업 완료",
+    image: "/photo/시공/세면대 욕실수전 비포 에프터.png",
     category: "수전",
-  },
-  {
-    id: 10,
-    title: "세면대 내시경 검사",
-    description: "세면대 배관 내부 정밀 검사",
-    image: "/photo/세면대내시경.png",
-    category: "진단",
-  },
-  {
-    id: 11,
-    title: "세면대 막힘 해결",
-    description: "세면대 배수구 막힘 신속 처리",
-    image: "/photo/세면대막힘뚫음.png",
-    category: "세면대",
-  },
-  {
-    id: 12,
-    title: "세면대 수전 교체",
-    description: "세면대 수전 노후 교체 완료",
-    image: "/photo/세면대수전교체.png",
-    category: "수전",
-  },
-  {
-    id: 13,
-    title: "싱크대 배관 검사",
-    description: "싱크대 막힘 원인 배관 검사",
-    image: "/photo/싱크대막힘 배관검사.png",
-    category: "진단",
-  },
-  {
-    id: 14,
-    title: "싱크대 수전 교체",
-    description: "싱크대 수전 교체 및 배관 점검",
-    image: "/photo/싱크대수전교체.png",
-    category: "수전",
-  },
-  {
-    id: 15,
-    title: "열화상 카메라 누수 탐지",
-    description: "열화상 카메라로 정확한 누수 위치 파악",
-    image: "/photo/열화상카메라.png",
-    category: "탐지",
-  },
-  {
-    id: 16,
-    title: "현장 작업 사진",
-    description: "전문 장비를 활용한 배관 작업",
-    image: "/photo/작업사진.png",
-    category: "작업",
-  },
-  {
-    id: 17,
-    title: "천장 누수 열화상 탐지",
-    description: "천장 누수 열화상 카메라 정밀 탐지",
-    image: "/photo/천장누수 열화상탐지.png",
-    category: "탐지",
-  },
-  {
-    id: 18,
-    title: "청음식 누수 탐지",
-    description: "청음식 누수탐지기로 정확한 위치 확인",
-    image: "/photo/청음식누수탐지기.png",
-    category: "탐지",
-  },
-  {
-    id: 19,
-    title: "하수구 역류 시공",
-    description: "하수구 역류 차단 시공 완료",
-    image: "/photo/하수구역류 시공사진.png",
-    category: "하수구",
   },
 ];
 
@@ -200,11 +109,11 @@ export function CasesSection() {
           </p>
         </header>
 
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
           {cases.map((caseItem) => (
             <article
               key={caseItem.id}
-              className="relative overflow-hidden group cursor-pointer aspect-square"
+              className="relative overflow-hidden group cursor-pointer aspect-video"
               onClick={() => handleCaseClick(caseItem)}
               onMouseEnter={() => setActiveCase(caseItem.id)}
               onMouseLeave={() => setActiveCase(null)}
@@ -226,7 +135,7 @@ export function CasesSection() {
                 }`}></div>
 
                 {/* 카테고리 뱃지 */}
-                <div className="absolute top-4 left-4 z-10">
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10">
                   <span className="bg-[#fbbf24] text-[#191919] px-3 py-1 text-sm font-bold">
                     {caseItem.category}
                   </span>

@@ -62,17 +62,21 @@ export function HeroSection() {
         <div className="container-custom text-center text-white">
           <div className="space-y-6 md:space-y-8">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              24시간 긴급 출동
+              하수구·변기·세면대막힘
             </h1>
 
             <p className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#fbbf24]">
-              프렌즈배관 | 서울/경기/인천 수도권
+              누수탐지까지 한번에 해결해드립니다!
             </p>
 
-            <p className="text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto leading-relaxed opacity-90">
-              싱크대 막힘, 하수구 역류, 변기 고장 등<br />
-              모든 배관 문제를 신속하게 해결해드립니다.
-            </p>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl px-8 py-6 md:px-12 md:py-8 max-w-2xl mx-auto border-2 border-[#fbbf24]">
+              <p className="text-3xl md:text-4xl lg:text-5xl font-black text-[#fbbf24] mb-3">
+                미해결시 0원!
+              </p>
+              <p className="text-3xl md:text-4xl lg:text-5xl font-black text-white">
+                출장비 0원!
+              </p>
+            </div>
 
             <div className="pt-4 md:pt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a href={`tel:${SITE_CONFIG.contact.phone}`}>
