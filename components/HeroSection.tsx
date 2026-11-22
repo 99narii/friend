@@ -77,17 +77,6 @@ export function HeroSection() {
                 출장비 0원!
               </p>
             </div>
-
-            <div className="pt-4 md:pt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a href={`tel:${SITE_CONFIG.contact.phone}`}>
-                <Button
-                  variant="secondary"
-                  className="text-lg md:text-xl px-8 py-4"
-                >
-                  📞 지금 바로 전화하기
-                </Button>
-              </a>
-            </div>
           </div>
 
           {/* Slide indicators */}

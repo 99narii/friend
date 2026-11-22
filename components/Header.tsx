@@ -79,7 +79,7 @@ export function Header() {
           {/* CTA Button */}
           <a href={`tel:${SITE_CONFIG.contact.phone}`}>
             <Button variant="primary" className="text-base md:text-lg font-bold whitespace-nowrap">
-              📞 {SITE_CONFIG.contact.phone}
+              {SITE_CONFIG.contact.phone}
             </Button>
           </a>
         </div>
