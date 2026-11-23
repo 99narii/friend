@@ -121,8 +121,8 @@ export function EquipmentSection() {
               {/* 이미지 */}
               <div className="relative w-full h-48 md:h-80 lg:h-96 bg-white">
                 {/* 상단 뱃지 */}
-                <div className="absolute top-4 left-4 z-10">
-                  <span className="bg-black text-white px-4 py-2 text-sm md:text-base font-bold shadow-lg">
+                <div className="absolute top-0 left-0 z-10">
+                  <span className="bg-black text-white px-3 py-1.5 md:px-4 md:py-2 text-xs md:text-sm font-bold shadow-lg">
                     {equipment.name}
                   </span>
                 </div>
@@ -136,8 +136,8 @@ export function EquipmentSection() {
               </div>
 
               {/* 설명 */}
-              <div className="p-5 md:p-6">
-                <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+              <div className="p-3 md:p-5">
+                <p className="text-gray-700 text-xs md:text-sm leading-relaxed">
                   {equipment.description}
                 </p>
               </div>
