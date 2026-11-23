@@ -73,7 +73,10 @@ export function HeroSection() {
             key={index}
             className="inline-block"
             style={{
-              animation: animationTriggered ? "wordBounce 0.6s ease-out forwards" : "none",
+              animationName: animationTriggered ? "wordBounce" : "none",
+              animationDuration: "0.6s",
+              animationTimingFunction: "ease-out",
+              animationFillMode: "forwards",
               animationDelay: `${baseDelay + index * 0.1}s`,
               opacity: 0,
             }}
@@ -119,7 +122,10 @@ export function HeroSection() {
             <div
               className="relative mb-2 md:mb-2 lg:mb-3"
               style={{
-                animation: animationTriggered ? "iconBounce 0.8s ease-out forwards" : "none",
+                animationName: animationTriggered ? "iconBounce" : "none",
+                animationDuration: "0.8s",
+                animationTimingFunction: "ease-out",
+                animationFillMode: "forwards",
                 opacity: 0,
               }}
             >
