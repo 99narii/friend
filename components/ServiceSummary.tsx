@@ -58,7 +58,7 @@ function ServiceCard({ name, description, price, image, index }: ServiceCardProp
       itemType="https://schema.org/Service"
     >
       {/* 서비스 이미지 */}
-      <div className="relative w-full h-32 md:h-64 lg:h-72 bg-gradient-to-br from-[#1e3a8a] to-[#172554]">
+      <div className="relative w-full aspect-square md:aspect-auto md:h-64 lg:h-72 bg-gradient-to-br from-[#1e3a8a] to-[#172554]">
         <Image
           src={image}
           alt={`${name} 서비스 이미지`}
