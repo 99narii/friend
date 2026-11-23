@@ -69,7 +69,7 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className="text-[18px] font-semibold text-gray-700 hover:text-[#1e3a8a] transition-colors"
+                className="text-sm md:text-base lg:text-[18px] font-semibold text-gray-700 hover:text-[#1e3a8a] transition-colors"
               >
                 {item.name}
               </a>
