@@ -206,12 +206,15 @@ export function ReviewSection() {
     ? [...shuffledReviews, ...shuffledReviews, ...shuffledReviews]
     : [];
 
-  // 자동 스크롤 애니메이션
+  // 자동 스크롤 애니메이션 (PC에서만)
   useEffect(() => {
+    // 모바일에서는 자동 슬라이드 비활성화
+    if (isMobile) return;
+
     const animate = () => {
       if (!containerRef.current || isPaused || isDragging) return;
 
-      containerRef.current.scrollLeft += 4; // 2 → 4 (2배 빠르게)
+      containerRef.current.scrollLeft += 4;
 
       // 무한 스크롤: 1/3 지점을 넘으면 처음으로
       const maxScroll = containerRef.current.scrollWidth / 3;
@@ -231,7 +234,7 @@ export function ReviewSection() {
         cancelAnimationFrame(animationRef.current);
       }
     };
-  }, [isPaused, isDragging]);
+  }, [isPaused, isDragging, isMobile]);
 
   const handleMouseDown = (e: React.MouseEvent) => {
     if (!containerRef.current) return;
@@ -258,29 +261,7 @@ export function ReviewSection() {
     setIsPaused(false);
   };
 
-  // 터치 이벤트 핸들러
-  const handleTouchStart = (e: React.TouchEvent) => {
-    if (!containerRef.current) return;
-    setIsDragging(true);
-    setIsPaused(true);
-    setStartX(e.touches[0].pageX - containerRef.current.offsetLeft);
-    setScrollLeft(containerRef.current.scrollLeft);
-  };
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    if (!isDragging || !containerRef.current) return;
-    const x = e.touches[0].pageX - containerRef.current.offsetLeft;
-    const walk = (x - startX) * 3; // 2 → 3 (터치도 시원하게)
-    containerRef.current.scrollLeft = scrollLeft - walk;
-  };
-
-  const handleTouchEnd = () => {
-    setIsDragging(false);
-    // 모바일에서는 터치 끝나도 자동 슬라이드 계속
-    if (isMobile) {
-      setIsPaused(false);
-    }
-  };
+  // 모바일에서는 터치 이벤트 불필요 (네이티브 스크롤 사용)
 
   return (
     <section
@@ -296,6 +277,18 @@ export function ReviewSection() {
           <p className="text-gray-600 text-lg md:text-xl">
             프렌즈배관을 이용하신 고객님들의 생생한 후기입니다
           </p>
+          {/* 모바일 안내 문구 */}
+          <div className="md:hidden mt-6 flex justify-center">
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#1e3a8a] to-[#1e40af] text-white px-5 py-2.5 rounded-full shadow-md">
+              <svg className="w-4 h-4 animate-bounce-horizontal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+              <span className="text-sm font-semibold">좌우로 슬라이드하여 리뷰를 확인하세요</span>
+              <svg className="w-4 h-4 animate-bounce-horizontal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </div>
+          </div>
         </header>
       </div>
 
@@ -307,10 +300,10 @@ export function ReviewSection() {
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
         onMouseEnter={() => !isMobile && setIsPaused(true)}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
-        style={{ scrollBehavior: isDragging ? "auto" : "smooth" }}
+        style={{
+          scrollBehavior: isDragging ? "auto" : "smooth",
+          WebkitOverflowScrolling: "touch"
+        }}
       >
         <div className="flex gap-6">
           {extendedReviews.map((review, index) => (
@@ -361,6 +354,19 @@ export function ReviewSection() {
         .scrollbar-hide {
           -ms-overflow-style: none;
           scrollbar-width: none;
+        }
+
+        @keyframes bounce-horizontal {
+          0%, 100% {
+            transform: translateX(0);
+          }
+          50% {
+            transform: translateX(4px);
+          }
+        }
+
+        :global(.animate-bounce-horizontal) {
+          animation: bounce-horizontal 1.5s ease-in-out infinite;
         }
       `}</style>
     </section>
