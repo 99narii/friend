@@ -20,6 +20,7 @@ const backgroundImages = [
 
 export function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [animationTriggered, setAnimationTriggered] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -29,8 +30,37 @@ export function HeroSection() {
     return () => clearInterval(timer);
   }, []);
 
+  useEffect(() => {
+    // 컴포넌트 마운트 후 애니메이션 트리거
+    setAnimationTriggered(true);
+  }, []);
+
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
+  };
+
+  // 텍스트를 단어별로 분리하는 함수
+  const renderAnimatedText = (text: string, baseDelay: number = 0) => {
+    const words = text.split(" ");
+    return (
+      <>
+        {words.map((word, index) => (
+          <span
+            key={index}
+            className="inline-block"
+            style={{
+              animation: animationTriggered ? "wordBounce 0.6s ease-out" : "none",
+              animationDelay: `${baseDelay + index * 0.1}s`,
+              animationFillMode: "both",
+              opacity: 0,
+            }}
+          >
+            {word}
+            {index < words.length - 1 && "\u00A0"}
+          </span>
+        ))}
+      </>
+    );
   };
 
   return (
@@ -62,7 +92,14 @@ export function HeroSection() {
         <div className="container-custom text-center text-white">
           <div className="space-y-3 md:space-y-4 lg:space-y-6 flex flex-col items-center">
             {/* 경고 아이콘 - 라인 스타일 */}
-            <div className="relative mb-2 md:mb-2 lg:mb-3">
+            <div
+              className="relative mb-2 md:mb-2 lg:mb-3"
+              style={{
+                animation: animationTriggered ? "iconBounce 0.8s ease-out" : "none",
+                animationFillMode: "both",
+                opacity: 0,
+              }}
+            >
               <svg className="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 xl:w-24 xl:h-24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                 {/* 삼각형 테두리 */}
                 <path d="M50 10 L10 85 L90 85 Z" stroke="#FFD700" strokeWidth="3" fill="none"/>
@@ -73,11 +110,11 @@ export function HeroSection() {
             </div>
 
             <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight" style={{ color: '#FFD700', fontWeight: '700' }}>
-              365일 24시, 꽉 막힌 속까지 시원하게!
+              {renderAnimatedText("365일 24시, 꽉 막힌 속까지 시원하게!", 0.3)}
             </h1>
 
             <p className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-normal leading-relaxed" style={{ color: '#FFD700' }}>
-              전 지역 30분 내 긴급 출동 서비스
+              {renderAnimatedText("전 지역 30분 내 긴급 출동 서비스", 1.0)}
             </p>
           </div>
 
@@ -99,6 +136,43 @@ export function HeroSection() {
           </div>
         </div>
       </div>
+
+      {/* 단어별 바운스 애니메이션 */}
+      <style jsx>{`
+        @keyframes iconBounce {
+          0% {
+            opacity: 0;
+            transform: scale(0.3) translateY(50px);
+          }
+          50% {
+            transform: scale(1.1) translateY(-10px);
+          }
+          70% {
+            transform: scale(0.95) translateY(5px);
+          }
+          100% {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+          }
+        }
+
+        @keyframes wordBounce {
+          0% {
+            opacity: 0;
+            transform: translateY(50px);
+          }
+          50% {
+            transform: translateY(-10px);
+          }
+          70% {
+            transform: translateY(5px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
     </section>
   );
 }
