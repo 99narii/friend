@@ -107,7 +107,7 @@ export const SITE_CONFIG = {
 
   // Open Graph 이미지
   ogImage: {
-    url: "/logo.png",
+    url: "/main1.jpg",
     width: 1200,
     height: 630,
     alt: "프렌즈배관 - 24시간 긴급 배관 서비스",
