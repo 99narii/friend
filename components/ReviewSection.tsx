@@ -211,7 +211,7 @@ export function ReviewSection() {
     const animate = () => {
       if (!containerRef.current || isPaused || isDragging) return;
 
-      containerRef.current.scrollLeft += 2;
+      containerRef.current.scrollLeft += 4; // 2 → 4 (2배 빠르게)
 
       // 무한 스크롤: 1/3 지점을 넘으면 처음으로
       const maxScroll = containerRef.current.scrollWidth / 3;
@@ -249,7 +249,7 @@ export function ReviewSection() {
     if (!isDragging || !containerRef.current) return;
     e.preventDefault();
     const x = e.pageX - containerRef.current.offsetLeft;
-    const walk = (x - startX) * 2;
+    const walk = (x - startX) * 3; // 2 → 3 (더 시원하게)
     containerRef.current.scrollLeft = scrollLeft - walk;
   };
 
@@ -270,7 +270,7 @@ export function ReviewSection() {
   const handleTouchMove = (e: React.TouchEvent) => {
     if (!isDragging || !containerRef.current) return;
     const x = e.touches[0].pageX - containerRef.current.offsetLeft;
-    const walk = (x - startX) * 2;
+    const walk = (x - startX) * 3; // 2 → 3 (터치도 시원하게)
     containerRef.current.scrollLeft = scrollLeft - walk;
   };
 
