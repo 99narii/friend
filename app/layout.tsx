@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 // SEO/AEO/GEO 최적화된 메타데이터
 export const metadata: Metadata = {
-  metadataBase: new URL('https://friendspipe.com'),
+  metadataBase: new URL('https://friend-system.netlify.app'),
   ...generateSiteMetadata(),
 };
 
