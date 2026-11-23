@@ -62,8 +62,8 @@ export function HeroSection() {
         <div className="container-custom text-center text-white">
           <div className="space-y-3 md:space-y-4 lg:space-y-6 flex flex-col items-center">
             {/* 경고 아이콘 - 라인 스타일 */}
-            <div className="relative mb-1 md:mb-2 lg:mb-3">
-              <svg className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 xl:w-24 xl:h-24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div className="relative mb-2 md:mb-2 lg:mb-3">
+              <svg className="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 xl:w-24 xl:h-24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                 {/* 삼각형 테두리 */}
                 <path d="M50 10 L10 85 L90 85 Z" stroke="#FFD700" strokeWidth="3" fill="none"/>
                 {/* 느낌표 */}
@@ -72,11 +72,11 @@ export function HeroSection() {
               </svg>
             </div>
 
-            <h1 className="text-xl md:text-2xl lg:text-4xl xl:text-5xl font-bold leading-tight" style={{ color: '#FFD700', fontWeight: '700' }}>
+            <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight" style={{ color: '#FFD700', fontWeight: '700' }}>
               365일 24시, 꽉 막힌 속까지 시원하게!
             </h1>
 
-            <p className="text-xl md:text-2xl lg:text-4xl xl:text-5xl font-normal leading-relaxed" style={{ color: '#FFD700' }}>
+            <p className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-normal leading-relaxed" style={{ color: '#FFD700' }}>
               전 지역 30분 내 긴급 출동 서비스
             </p>
           </div>
