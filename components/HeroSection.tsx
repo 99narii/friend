@@ -7,7 +7,7 @@
 
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "./ui/Button";
 import { SITE_CONFIG } from "@/src/constants/site";
 
@@ -21,6 +21,7 @@ const backgroundImages = [
 export function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [animationTriggered, setAnimationTriggered] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -30,9 +31,32 @@ export function HeroSection() {
     return () => clearInterval(timer);
   }, []);
 
+  // IntersectionObserver로 히어로 섹션이 보일 때마다 애니메이션 트리거
   useEffect(() => {
-    // 컴포넌트 마운트 후 애니메이션 트리거
-    setAnimationTriggered(true);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // 히어로 섹션이 보이면 애니메이션 시작
+            setAnimationTriggered(true);
+          } else {
+            // 히어로 섹션이 안 보이면 애니메이션 리셋
+            setAnimationTriggered(false);
+          }
+        });
+      },
+      { threshold: 0.3 } // 30% 보이면 트리거
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
   }, []);
 
   const goToSlide = (index: number) => {
@@ -64,6 +88,7 @@ export function HeroSection() {
 
   return (
     <section
+      ref={sectionRef}
       className="relative h-[650px] md:h-[800px] lg:h-[1000px] overflow-hidden"
       aria-label="메인 히어로"
     >
