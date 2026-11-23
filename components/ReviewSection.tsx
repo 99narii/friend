@@ -21,28 +21,28 @@ const reviews: Review[] = [
     id: 1,
     image: "/photo/리뷰/내시경.jpg",
     rating: 5,
-    content: "배관 내시경으로 막힌 원인을 정확하게 찾아주셨어요. 전문가다운 진단이었습니다!",
+    content: "배관 내시경으로 막힌 원인을 정확하게 찾아주셨어요.",
     author: "김*리",
   },
   {
     id: 2,
     image: "/photo/리뷰/내시경1.jpg",
     rating: 5,
-    content: "배관 내시경 덕분에 문제를 정확히 파악할 수 있었습니다. 감사합니다!",
+    content: "배관 내시경 덕분에 문제를 정확히 파악할 수 있었습니다. 감사합니다!!!",
     author: "이*수",
   },
   {
     id: 3,
-    image: "/photo/리뷰/내시경2.jpg",
+    image: "/photo/리뷰/막힘.jpg",
     rating: 5,
-    content: "내시경으로 배관 상태를 직접 보여주시니 신뢰가 갔어요. 추천합니다!",
+    content: "막힌 배관을 신속하게 뚫어주셨습니다. 빠르고 깔끔하게 해결해주셨어요!!!",
     author: "박*영",
   },
   {
     id: 4,
-    image: "/photo/리뷰/막힘.jpg",
+    image: "/photo/리뷰/내시경2.jpg",
     rating: 5,
-    content: "막힌 배관을 신속하게 뚫어주셨습니다. 정말 빠르고 깔끔한 작업이었어요!",
+    content: "배관 내시경으로 막힌 원인을 정확하게 찾아주셨어요.",
     author: "최*민",
   },
   {
@@ -56,7 +56,7 @@ const reviews: Review[] = [
     id: 6,
     image: "/photo/리뷰/배관.jpg",
     rating: 5,
-    content: "배관 공사를 깔끔하게 처리해주셨어요. 실력이 정말 좋으십니다!",
+    content: "배관 공사를 깔끔하게 처리해주셨어요. 고수님이십니다!",
     author: "강*호",
   },
   {
@@ -70,21 +70,21 @@ const reviews: Review[] = [
     id: 8,
     image: "/photo/리뷰/배관2.jpg",
     rating: 5,
-    content: "배관 설비 점검부터 수리까지 꼼꼼하게 해주셨어요. 만족스럽습니다!",
+    content: "배관 설비 점검부터 수리까지 꼼꼼하게 해주셨어요. 대만족!!!",
     author: "조*우",
   },
   {
     id: 9,
     image: "/photo/리뷰/배관막힘.jpg",
     rating: 5,
-    content: "배관이 막혀서 물이 안 빠졌는데 고압세척으로 완벽하게 해결!",
+    content: "계속 배관이 막혀서 물이 안 빠졌는데 고압세척으로 완벽하게 해결해주셨어요!",
     author: "한*경",
   },
   {
     id: 10,
     image: "/photo/리뷰/변기막힘.jpg",
     rating: 5,
-    content: "변기 막힘을 신속하게 해결해주셨습니다. 정말 전문적이고 친절하셨어요!",
+    content: "변기 막힘을 신속하게 해결해주셨습니다. 정말 전문적이고 친절하셨어요~!",
     author: "송*희",
   },
   {
@@ -98,21 +98,21 @@ const reviews: Review[] = [
     id: 12,
     image: "/photo/리뷰/세면대교체2.jpg",
     rating: 5,
-    content: "세면대 수전 교체를 완벽하게 해주셨어요. 물 새는 문제도 해결!",
+    content: "세면대 수전 교체를 완벽하게 해주셨어요. 물 새는 문제도 해결되서 행복합니다~!",
     author: "서*현",
   },
   {
     id: 13,
     image: "/photo/리뷰/싱크대막힘.jpg",
     rating: 5,
-    content: "싱크대 막힘 문제로 고생했는데 한 번에 시원하게 뚫어주셨습니다!",
+    content: "싱크대 막힘 문제로 고생했는데 한 번에 시원하게 뚫어주셨습니다~ 감사합니다!",
     author: "장*우",
   },
   {
     id: 14,
     image: "/photo/리뷰/싱크대막힘2.jpg",
     rating: 5,
-    content: "싱크대가 완전히 막혔는데 고압세척으로 완벽 해결! 감사합니다!",
+    content: "싱크대가 완전히 막혔는데 고압세척으로 완벽 해결! 감사합니다.",
     author: "임*미",
   },
   {
@@ -147,21 +147,21 @@ const reviews: Review[] = [
     id: 19,
     image: "/photo/리뷰/정확한진단.jpg",
     rating: 5,
-    content: "정확한 진단으로 불필요한 작업 없이 딱 필요한 부분만! 합리적이에요!",
+    content: "정확한 진단으로 불필요한 작업 없이 딱 필요한 부분만! 합리적이에요~",
     author: "이*희",
   },
   {
     id: 20,
     image: "/photo/리뷰/진단.jpg",
     rating: 5,
-    content: "정밀 진단으로 문제를 정확히 파악하고 해결해주셨어요. 믿을 수 있습니다!",
+    content: "정밀 진단으로 문제를 정확히 파악하고 해결해주셨어요. 믿을 수 있습니다!!!",
     author: "조*아",
   },
   {
     id: 21,
     image: "/photo/리뷰/천장누수.jpg",
     rating: 5,
-    content: "천장 누수를 열화상 카메라로 찾아내서 완벽하게 수리해주셨습니다!",
+    content: "천장 누수를 열화상 카메라로 근본적인 원인까지 찾아내서 완벽하게 수리해주셨습니다~ 감사합니다!",
     author: "강*석",
   },
 ];
@@ -173,9 +173,27 @@ export function ReviewSection() {
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
   const animationRef = useRef<number | null>(null);
+  const [shuffledReviews, setShuffledReviews] = useState<Review[]>([]);
+
+  // 배열 랜덤 셔플 함수 (Fisher-Yates 알고리즘)
+  const shuffleArray = <T,>(array: T[]): T[] => {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  };
+
+  // 컴포넌트 마운트시 한 번만 랜덤 셔플
+  useEffect(() => {
+    setShuffledReviews(shuffleArray(reviews));
+  }, []);
 
   // 무한 슬라이드를 위해 리뷰 배열을 3번 복제
-  const extendedReviews = [...reviews, ...reviews, ...reviews];
+  const extendedReviews = shuffledReviews.length > 0
+    ? [...shuffledReviews, ...shuffledReviews, ...shuffledReviews]
+    : [];
 
   // 자동 스크롤 애니메이션
   useEffect(() => {
