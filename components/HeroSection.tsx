@@ -49,9 +49,8 @@ export function HeroSection() {
             key={index}
             className="inline-block"
             style={{
-              animation: animationTriggered ? "wordBounce 0.6s ease-out" : "none",
+              animation: animationTriggered ? "wordBounce 0.6s ease-out forwards" : "none",
               animationDelay: `${baseDelay + index * 0.1}s`,
-              animationFillMode: "both",
               opacity: 0,
             }}
           >
@@ -95,8 +94,7 @@ export function HeroSection() {
             <div
               className="relative mb-2 md:mb-2 lg:mb-3"
               style={{
-                animation: animationTriggered ? "iconBounce 0.8s ease-out" : "none",
-                animationFillMode: "both",
+                animation: animationTriggered ? "iconBounce 0.8s ease-out forwards" : "none",
                 opacity: 0,
               }}
             >
