@@ -258,6 +258,30 @@ export function ReviewSection() {
     setIsPaused(false);
   };
 
+  // 터치 이벤트 핸들러
+  const handleTouchStart = (e: React.TouchEvent) => {
+    if (!containerRef.current) return;
+    setIsDragging(true);
+    setIsPaused(true);
+    setStartX(e.touches[0].pageX - containerRef.current.offsetLeft);
+    setScrollLeft(containerRef.current.scrollLeft);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!isDragging || !containerRef.current) return;
+    const x = e.touches[0].pageX - containerRef.current.offsetLeft;
+    const walk = (x - startX) * 2;
+    containerRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const handleTouchEnd = () => {
+    setIsDragging(false);
+    // 모바일에서는 터치 끝나도 자동 슬라이드 계속
+    if (isMobile) {
+      setIsPaused(false);
+    }
+  };
+
   return (
     <section
       id="reviews"
@@ -283,6 +307,9 @@ export function ReviewSection() {
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
         onMouseEnter={() => !isMobile && setIsPaused(true)}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
         style={{ scrollBehavior: isDragging ? "auto" : "smooth" }}
       >
         <div className="flex gap-6">
