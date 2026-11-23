@@ -54,10 +54,10 @@ const cases: CaseItem[] = [
   },
   {
     id: 6,
-    title: "세면대 욕실수전 비포 애프터",
-    description: "욕실 수전 교체 작업 완료",
-    image: "/photo/시공/세면대 욕실수전 비포 에프터.png",
-    category: "수전",
+    title: "우수관 누수 수리",
+    description: "우수관 누수 탐지 및 수리 완료",
+    image: "/photo/우수관누수.png",
+    category: "누수",
   },
 ];
 

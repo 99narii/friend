@@ -60,23 +60,25 @@ export function HeroSection() {
       {/* Fixed Content */}
       <div className="relative h-full flex items-center justify-center">
         <div className="container-custom text-center text-white">
-          <div className="space-y-6 md:space-y-8 flex flex-col items-center">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              하수구·변기·세면대막힘
+          <div className="space-y-4 md:space-y-6 flex flex-col items-center">
+            {/* 경고 아이콘 - 라인 스타일 */}
+            <div className="relative mb-2 md:mb-3">
+              <svg className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                {/* 삼각형 테두리 */}
+                <path d="M50 10 L10 85 L90 85 Z" stroke="#FFD700" strokeWidth="3" fill="none"/>
+                {/* 느낌표 */}
+                <line x1="50" y1="35" x2="50" y2="55" stroke="#FFD700" strokeWidth="4" strokeLinecap="round"/>
+                <circle cx="50" cy="65" r="2.5" fill="#FFD700"/>
+              </svg>
+            </div>
+
+            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight" style={{ color: '#FFD700', fontWeight: '700' }}>
+              365일 24시, 꽉 막힌 속까지 시원하게!
             </h1>
 
-            <p className="text-[1.4rem] md:text-[2.3rem] lg:text-[2.8rem] font-semibold text-[#fbbf24] leading-tight tracking-tight">
-              누수탐지까지 한번에 해결해드립니다!
+            <p className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal leading-relaxed" style={{ color: '#FFD700' }}>
+              전 지역 30분 내 긴급 출동 서비스
             </p>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl px-12 py-8 md:px-16 md:py-10 lg:px-20 lg:py-12 mx-auto border-2 border-[#fbbf24]">
-              <p className="text-4xl md:text-6xl lg:text-7xl font-black text-[#fbbf24] mb-4 whitespace-nowrap">
-                미해결시 0원!
-              </p>
-              <p className="text-4xl md:text-6xl lg:text-7xl font-black text-white whitespace-nowrap">
-                출장비 0원!
-              </p>
-            </div>
           </div>
 
           {/* Slide indicators */}

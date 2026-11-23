@@ -153,16 +153,28 @@ export const SITE_CONFIG = {
       image: "/photo/세면대수전교체.png",
     },
     {
-      name: "천장 누수 탐지",
-      description: "열화상 카메라로 정확한 누수 위치 탐지",
+      name: "청음식 누수 탐지",
+      description: "청음식 누수탐지기로 정확한 누수 위치 확인",
       price: "변동",
-      image: "/photo/천장누수 열화상탐지.png",
+      image: "/photo/청음식누수탐지.png",
     },
     {
       name: "싱크대 수전 교체",
       description: "싱크대 수전 교체 및 연결 배관 점검",
       price: "변동",
       image: "/photo/싱크대수전교체.png",
+    },
+    {
+      name: "소변기 막힘",
+      description: "소변기 막힘 및 악취 문제 신속 해결",
+      price: "변동",
+      image: "/photo/소변기막힘.png",
+    },
+    {
+      name: "배관 설비",
+      description: "배관 설비 점검 및 교체 전문 서비스",
+      price: "변동",
+      image: "/photo/배관설비.png",
     },
   ],
 

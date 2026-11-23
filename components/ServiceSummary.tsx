@@ -121,15 +121,6 @@ export function ServiceSummary() {
           ))}
         </div>
 
-        {/* CTA 섹션 */}
-        <div className="mt-12 text-center">
-          <a
-            href="/services"
-            className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            모든 서비스 보기
-          </a>
-        </div>
       </div>
     </section>
   );
