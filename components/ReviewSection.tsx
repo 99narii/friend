@@ -174,6 +174,7 @@ export function ReviewSection() {
   const [scrollLeft, setScrollLeft] = useState(0);
   const animationRef = useRef<number | null>(null);
   const [shuffledReviews, setShuffledReviews] = useState<Review[]>([]);
+  const [isMobile, setIsMobile] = useState(false);
 
   // 배열 랜덤 셔플 함수 (Fisher-Yates 알고리즘)
   const shuffleArray = <T,>(array: T[]): T[] => {
@@ -184,6 +185,16 @@ export function ReviewSection() {
     }
     return shuffled;
   };
+
+  // 모바일 감지
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   // 컴포넌트 마운트시 한 번만 랜덤 셔플
   useEffect(() => {
@@ -271,7 +282,7 @@ export function ReviewSection() {
         onMouseUp={handleMouseUp}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
-        onMouseEnter={() => setIsPaused(true)}
+        onMouseEnter={() => !isMobile && setIsPaused(true)}
         style={{ scrollBehavior: isDragging ? "auto" : "smooth" }}
       >
         <div className="flex gap-6">
