@@ -119,7 +119,7 @@ export function EquipmentSection() {
               }`}
             >
               {/* 이미지 */}
-              <div className="relative w-full h-48 md:h-80 lg:h-96 bg-white">
+              <div className="relative w-full h-40 md:h-72 lg:h-80 bg-white">
                 {/* 상단 뱃지 */}
                 <div className="absolute top-0 left-0 z-10">
                   <span className="bg-black text-white px-3 py-1.5 md:px-4 md:py-2 text-xs md:text-sm font-bold shadow-lg">

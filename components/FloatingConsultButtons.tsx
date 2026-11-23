@@ -16,16 +16,16 @@ export function FloatingConsultButtons() {
     <>
       {/* 고정 버튼 */}
       <div className="fixed bottom-0 left-0 right-0 z-50 bg-[#1e3a8a] shadow-lg">
-        <div className="container-custom py-3">
-          <div className="grid grid-cols-2 gap-3">
+        <div className="container-custom py-2 md:py-3">
+          <div className="grid grid-cols-2 gap-2 md:gap-3">
             {/* 문자 상담 버튼 */}
             <button
               type="button"
               onClick={() => setIsModalOpen(true)}
-              className="flex items-center justify-center gap-2 bg-white text-[#1e3a8a] px-6 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all shadow-md hover:shadow-lg"
+              className="flex items-center justify-center gap-1 md:gap-2 bg-white text-[#1e3a8a] px-3 py-3 md:px-6 md:py-4 rounded-lg font-bold text-sm md:text-lg hover:bg-gray-100 transition-all shadow-md hover:shadow-lg"
             >
               <svg
-                className="w-6 h-6"
+                className="w-5 h-5 md:w-6 md:h-6"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -43,10 +43,10 @@ export function FloatingConsultButtons() {
             {/* 전화 상담 버튼 */}
             <a
               href={`tel:${SITE_CONFIG.contact.phone}`}
-              className="flex items-center justify-center gap-2 bg-[#fbbf24] text-[#191919] px-6 py-4 rounded-lg font-bold text-lg hover:bg-[#f59e0b] transition-all shadow-md hover:shadow-lg"
+              className="flex items-center justify-center gap-1 md:gap-2 bg-[#fbbf24] text-[#191919] px-3 py-3 md:px-6 md:py-4 rounded-lg font-bold text-sm md:text-lg hover:bg-[#f59e0b] transition-all shadow-md hover:shadow-lg"
             >
               <svg
-                className="w-6 h-6"
+                className="w-5 h-5 md:w-6 md:h-6"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
