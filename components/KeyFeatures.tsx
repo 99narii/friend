@@ -27,12 +27,6 @@ const features: Feature[] = [
       "최신 고압 세척기, 배관 카메라 등 전문 장비로 정확한 진단과 작업을 제공합니다.",
   },
   {
-    icon: "✅",
-    title: "3개월 무상 A/S",
-    description:
-      "모든 작업에 대해 3개월 무상 A/S를 제공하며, 작업 후에도 안심하실 수 있습니다.",
-  },
-  {
     icon: "💰",
     title: "투명한 가격",
     description:
