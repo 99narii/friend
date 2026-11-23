@@ -7,13 +7,14 @@
 
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Button } from "./ui/Button";
 import { SITE_CONFIG } from "@/src/constants/site";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const navItems = [
     { name: "주요 서비스", href: "#services" },
@@ -21,11 +22,21 @@ export function Header() {
     { name: "자주 묻는 질문", href: "#faq" },
   ];
 
+  // 스크롤 감지
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     const element = document.querySelector(href);
     if (element) {
-      const headerHeight = 100; // Desktop header height
+      const headerHeight = 70; // 스크롤 후 헤더 높이
       const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
       const offsetPosition = elementPosition - headerHeight;
 
@@ -43,12 +54,16 @@ export function Header() {
       role="banner"
     >
       {/* Desktop Header */}
-      <div className="hidden md:block h-[100px]">
+      <div
+        className={`hidden md:block transition-all duration-300 ${
+          isScrolled ? "h-[70px]" : "h-[100px]"
+        }`}
+      >
         <div className="container-custom h-full flex items-center justify-between">
           {/* Logo */}
           <a
             href="/"
-            className="flex items-center gap-3 hover:opacity-80 transition-opacity"
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
             aria-label={`${SITE_CONFIG.name} 홈으로 이동`}
           >
             <Image
@@ -56,10 +71,14 @@ export function Header() {
               alt={`${SITE_CONFIG.name} 로고`}
               width={64}
               height={64}
-              className="h-16 w-auto"
+              className={`w-auto transition-all duration-300 ${
+                isScrolled ? "h-12" : "h-16"
+              }`}
               priority
             />
-            <span className="text-2xl font-bold text-[#1e3a8a]">{SITE_CONFIG.name}</span>
+            <span className={`font-bold text-[#1e3a8a] transition-all duration-300 ${
+              isScrolled ? "text-xl" : "text-2xl"
+            }`}>{SITE_CONFIG.name}</span>
           </a>
 
           {/* Navigation */}

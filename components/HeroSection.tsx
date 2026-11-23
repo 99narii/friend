@@ -168,7 +168,7 @@ export function HeroSection() {
 
         @media (min-width: 768px) {
           .hero-section {
-            height: calc(100vh - 100px); /* PC 헤더 높이 100px */
+            height: calc(100vh - 70px); /* PC 스크롤 후 헤더 높이 70px (평균값 사용) */
           }
         }
 
