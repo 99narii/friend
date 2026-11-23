@@ -25,7 +25,7 @@ export function Header() {
     e.preventDefault();
     const element = document.querySelector(href);
     if (element) {
-      const headerHeight = 132; // Desktop header height
+      const headerHeight = 100; // Desktop header height
       const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
       const offsetPosition = elementPosition - headerHeight;
 
@@ -43,7 +43,7 @@ export function Header() {
       role="banner"
     >
       {/* Desktop Header */}
-      <div className="hidden md:block h-[132px]">
+      <div className="hidden md:block h-[100px]">
         <div className="container-custom h-full flex items-center justify-between">
           {/* Logo */}
           <a
@@ -54,12 +54,12 @@ export function Header() {
             <Image
               src="/logo.png"
               alt={`${SITE_CONFIG.name} 로고`}
-              width={80}
-              height={80}
-              className="h-20 w-auto"
+              width={64}
+              height={64}
+              className="h-16 w-auto"
               priority
             />
-            <span className="text-3xl font-bold text-[#1e3a8a]">{SITE_CONFIG.name}</span>
+            <span className="text-2xl font-bold text-[#1e3a8a]">{SITE_CONFIG.name}</span>
           </a>
 
           {/* Navigation */}
