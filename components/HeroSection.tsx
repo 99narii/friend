@@ -89,7 +89,7 @@ export function HeroSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative h-[650px] md:h-[800px] lg:h-[1000px] overflow-hidden"
+      className="relative overflow-hidden hero-section"
       aria-label="메인 히어로"
     >
       {/* Background Images with Transition */}
@@ -162,6 +162,16 @@ export function HeroSection() {
 
       {/* 단어별 바운스 애니메이션 */}
       <style jsx>{`
+        .hero-section {
+          height: calc(100vh - 71px); /* 모바일 헤더 높이 71px */
+        }
+
+        @media (min-width: 768px) {
+          .hero-section {
+            height: calc(100vh - 100px); /* PC 헤더 높이 100px */
+          }
+        }
+
         @keyframes iconBounce {
           0% {
             opacity: 0;
