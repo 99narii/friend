@@ -141,8 +141,8 @@ export const SITE_CONFIG = {
       image: "/photo/변기교체.png",
     },
     {
-      name: "화장실 배관 공사",
-      description: "화장실 전체 배관 점검 및 교체 공사",
+      name: "오수관 막힘 해결",
+      description: "오수관 막힘 해결",
       price: "변동",
       image: "/photo/변기막힘 내시경.png",
     },
